@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos Digitales Premium - Hotmart</title>
+    <!-- Incluye Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para usar la fuente Inter y algunos colores base -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#FF4500', // Naranja vibrante para Hotmart
+                        secondary: '#FFD700', // Dorado para acentos
+                        darkbg: '#1a202c', // Fondo oscuro
+                        lighttext: '#f7fafc', // Texto claro
+                        accentblue: '#3b82f6', // Azul para algunos detalles
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Estilos personalizados para la fuente Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Pequeñas mejoras de estilo que Tailwind no cubre directamente con clases simples */
+        .gradient-bg {
+            background-image: linear-gradient(to right top, #FF4500, #FF7F50);
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #FF4500, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .product-card:hover .buy-button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+    <!-- Encabezado / Hero Section -->
+    <header class="gradient-bg text-white py-24 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-fade-in-down">
+                Potencia tu Futuro con Conocimiento
+            </h1>
+            <p class="text-xl sm:text-2xl font-light mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
+                Accede a una curación exclusiva de los mejores cursos, ebooks y herramientas digitales de Hotmart.
+                ¡Invierte en ti hoy mismo!
+            </p>
+            <a href="#productos" class="inline-block bg-secondary text-primary font-bold py-4 px-10 rounded-full shadow-xl hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-lg">
+                Explorar Nuestros Productos Premium
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de Navegación -->
+    <nav class="bg-darkbg text-lighttext py-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-between items-center px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center mb-2 sm:mb-0">
+                <span class="text-2xl font-bold text-gradient">Hotmart Store</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#inicio" class="text-lg font-medium hover:text-secondary transition duration-200">Inicio</a>
+                <a href="#productos" class="text-lg font-medium hover:text-secondary transition duration-200">Productos</a>
+                <a href="#beneficios" class="text-lg font-medium hover:text-secondary transition duration-200">Beneficios</a>
+                <a href="#contacto" class="text-lg font-medium hover:text-secondary transition duration-200">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Productos Destacados -->
+    <section id="productos" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-center mb-16">
+                <span class="text-gradient">Nuestros Productos Más Destacados</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- Tarjeta de Producto 1 -->
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:scale-105 relative">
+                    <img src="https://placehold.co/600x400/FF4500/FFFFFF?text=Curso+Marketing" alt="Imagen del Curso de Marketing Digital" class="w-full h-56 object-cover transform group-hover:scale-100 transition-transform duration-500">
+                    <div class="p-7">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Maestría en Marketing Digital 2025</h3>
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Aprende las últimas tendencias y estrategias para dominar el marketing digital, desde SEO hasta campañas de PPC y redes sociales.
+                        </p>
+                        <div class="flex items-baseline justify-between mb-5">
+                            <span class="text-4xl font-extrabold text-primary">$97.00</span>
+                            <span class="text-gray-500 line-through text-xl">$199.00</span>
+                        </div>
+                        <!-- Este botón redirigirá al enlace de Hotmart de tu producto -->
+                        <a href="TU_ENLACE_DE_COMPRA_HOTMART_PRODUCTO_1" target="_blank" class="buy-button opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 block w-full text-center bg-primary text-white font-bold py-3.5 px-6 rounded-lg shadow-md hover:bg-red-700 transition-all duration-300">
+                            ¡Acceso Inmediato!
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Producto 2 -->
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:scale-105 relative">
+                    <img src="https://placehold.co/600x400/FFD700/000000?text=Ebook+Finanzas" alt="Imagen del Ebook de Finanzas Personales" class="w-full h-56 object-cover transform group-hover:scale-100 transition-transform duration-500">
+                    <div class="p-7">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Ebook: Tu Guía para la Libertad Financiera</h3>
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Un plan paso a paso para gestionar tus finanzas, invertir inteligentemente y construir riqueza a largo plazo.
+                        </p>
+                        <div class="flex items-baseline justify-between mb-5">
+                            <span class="text-4xl font-extrabold text-primary">$39.00</span>
+                            <span class="text-gray-500 line-through text-xl">$59.00</span>
+                        </div>
+                        <a href="TU_ENLACE_DE_COMPRA_HOTMART_PRODUCTO_2" target="_blank" class="buy-button opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 block w-full text-center bg-primary text-white font-bold py-3.5 px-6 rounded-lg shadow-md hover:bg-red-700 transition-all duration-300">
+                            ¡Descargar Ahora!
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Producto 3 -->
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:scale-105 relative">
+                    <img src="https://placehold.co/600x400/007bff/FFFFFF?text=Masterclass+Programacion" alt="Imagen de la Masterclass de Programación" class="w-full h-56 object-cover transform group-hover:scale-100 transition-transform duration-500">
+                    <div class="p-7">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Masterclass: Desarrollo Web desde Cero</h3>
+                        <p class="text-gray-600 mb-4 text-base leading-relaxed">
+                            Conviértete en un desarrollador web full-stack. Aprende HTML, CSS, JavaScript y frameworks modernos.
+                        </p>
+                        <div class="flex items-baseline justify-between mb-5">
+                            <span class="text-4xl font-extrabold text-primary">$129.00</span>
+                        </div>
+                        <a href="TU_ENLACE_DE_COMPRA_HOTMART_PRODUCTO_3" target="_blank" class="buy-button opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 block w-full text-center bg-primary text-white font-bold py-3.5 px-6 rounded-lg shadow-md hover:bg-red-700 transition-all duration-300">
+                            ¡Inscribirme!
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Puedes añadir más productos aquí siguiendo la misma estructura -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Beneficios / ¿Por Qué Elegirnos? -->
+    <section id="beneficios" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-16">
+                <span class="text-gradient">¿Por Qué Elegir Nuestros Productos Digitales?</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Beneficio 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+                    <svg class="w-16 h-16 text-primary mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4">Calidad Comprobada</h3>
+                    <p class="text-gray-600">
+                        Solo ofrecemos productos de Hotmart con altas valoraciones y creadores verificados, garantizando tu satisfacción.
+                    </p>
+                </div>
+
+                <!-- Beneficio 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+                    <svg class="w-16 h-16 text-primary mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8L10 20m-4-6v4m0 0v4m0-4h4m-4 0H8m0 0h4m-4 0v4m0-4H4m0 0H0"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4">Acceso Inmediato</h3>
+                    <p class="text-gray-600">
+                        Una vez completes tu compra, tendrás acceso instantáneo a tu producto digital desde cualquier dispositivo.
+                    </p>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center">
+                    <svg class="w-16 h-16 text-primary mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2zM9 14h6m-3-4v.01M9 21H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3m-7 4v4m0-4h.01M17 14h.01"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4">Garantía de Satisfacción</h3>
+                    <p class="text-gray-600">
+                        Todos los productos Hotmart cuentan con una garantía de satisfacción. Tu inversión está segura.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción Final -->
+    <section class="bg-primary text-white py-16 px-4 sm:px-6 lg:px-8 text-center shadow-xl">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                ¡No esperes más! Empieza a transformar tu vida hoy.
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Explora nuestra selección y encuentra el producto perfecto para tus metas.
+            </p>
+            <a href="#productos" class="inline-block bg-secondary text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 text-lg">
+                Ver todos los productos
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios (Opcional) -->
+    <section class="bg-darkbg text-lighttext py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-secondary">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic mb-4">"¡Totalmente fascinado con la calidad de los cursos! He aplicado lo aprendido y los resultados son inmediatos. Recomiendo esta tienda al 100%."</p>
+                    <p class="font-semibold">- Sofía M., Marketer Digital</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic mb-4">"Encontré exactamente lo que necesitaba para impulsar mi negocio. La navegación es sencilla y los productos son de primera. ¡Excelente experiencia!"</p>
+                    <p class="font-semibold">- David P., Emprendedor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-xl mx-auto text-center bg-white p-10 rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8">¿Tienes alguna pregunta?</h2>
+            <p class="text-lg mb-8 text-gray-700">
+                Estamos aquí para ayudarte. No dudes en contactarnos o seguirnos en nuestras redes.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:tuemail@example.com" class="bg-primary text-white font-bold py-3.5 px-7 rounded-lg hover:bg-red-700 transition duration-300 shadow-md">
+                    Envíanos un Email
+                </a>
+                <!-- Puedes añadir enlaces a tus redes sociales aquí con iconos si lo deseas -->
+                <a href="#" class="bg-gray-700 text-white font-bold py-3.5 px-7 rounded-lg hover:bg-gray-800 transition duration-300 shadow-md">
+                    Facebook
+                </a>
+                <a href="#" class="bg-accentblue text-white font-bold py-3.5 px-7 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-darkbg text-lighttext py-10 px-4 sm:px-6 lg:px-8 text-center mt-12">
+        <div class="max-w-7xl mx-auto">
+            <p class="mb-2">&copy; 2025 Tu Tienda de Productos Digitales. Todos los derechos reservados.</p>
+            <p class="text-sm opacity-80">
+                Impulsando tu crecimiento con los mejores productos de Hotmart.
+            </p>
+            <div class="flex justify-center space-x-4 mt-4 text-sm">
+                <a href="#" class="hover:text-secondary transition duration-200">Política de Privacidad</a>
+                <a href="#" class="hover:text-secondary transition duration-200">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
